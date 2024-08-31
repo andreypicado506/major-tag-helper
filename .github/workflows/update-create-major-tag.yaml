@@ -11,11 +11,12 @@ on:
         type: choice
         description: The major version to update
         options:
-          - v5
-          - v4
-          - v3
-          - v2
-          - v1
+          - "5"
+          - "4"
+          - "3"
+          - "2"
+          - "1"
+          - "0"
   release:
     types:
       - published
