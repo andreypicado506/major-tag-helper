@@ -62,7 +62,6 @@ jobs:
           fi
         }
 
-        tag="$1"
         validate_tag "$tag"
 
     - name: Git config
