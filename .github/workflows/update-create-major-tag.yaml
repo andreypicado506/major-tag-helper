@@ -48,7 +48,7 @@ jobs:
       run: |
         # Function to validate a semantic versioning tag
         validate_tag() {
-          local tag="${{ env.TARGET }}"
+          local tag="$1"
 
           # Regular expression for validating semantic versioning tag
           local semver_regex="^([0-9]+)\.([0-9]+)\.([0-9]+)(-[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?(\+[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?$"
@@ -62,7 +62,7 @@ jobs:
           fi
         }
 
-        validate_tag "$tag"
+        validate_tag "${{ env.TARGET }}"
 
     - name: Git config
       run: |
